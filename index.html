@@ -1,0 +1,256 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <style>
+    .Fondo{
+        background-color: black;
+        color: white;
+    }
+
+    .titulo{
+        font-size: 25px !important;
+        align-items: center;
+        margin-left: 15px;
+    }
+
+    .radio-inputs {
+      position: relative;
+      display: flex;
+      
+      background-color: rgb(83, 82, 82);
+      box-sizing: border-box;
+      font-size: 14px;
+      width: 100%;
+      padding: 1rem 1rem 0 1rem;
+    }
+
+    .radio-inputs .radio input {
+      display: none;
+    }
+
+    .radio-inputs .radio .name {
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+      border: none;
+      padding: 0.5rem 0.8rem;
+      transition: all 0.15s ease-in-out;
+      position: relative;
+    }
+
+    .radio-inputs .radio input:checked + .name {
+      background-color: #000000;
+      font-weight: 600;
+    }
+    .radio-inputs .radio input + .name:hover {
+      color: #fff;
+    }
+    .radio-inputs .radio input:checked + .name:hover {
+      color: #ffffff;
+    }
+
+    .radio-inputs .radio input:checked + .name::after,
+    .radio-inputs .radio input:checked + .name::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: rgb(83, 82, 82);
+      bottom: 0;
+    }
+
+    .radio-inputs .radio input:checked + .name::after {
+      right: -10px;
+      border-bottom-left-radius: 300px;
+      box-shadow: -3px 3px 0px 3px #000000;
+    }
+    .radio-inputs .radio input:checked + .name::before {
+      left: -10px;
+      border-bottom-right-radius: 300px;
+      box-shadow: 3px 3px 0px 3px #000000;
+    }
+  </style>
+  <body class="Fondo">
+    <div class="bg-zinc-100 dark:bg-zinc-800 min-h-screen">
+      <header class="bg-white dark:bg-zinc-900 shadow-md">
+        <div class="radio-inputs flex">
+          <label class="radio flex">
+            <input type="radio" name="radio" checked="" />
+            <span class="name" id="inicio"> Inicio</span>
+          </label>
+          <label class="radio flex">
+            <input type="radio" name="radio" />
+            <span class="name" id="habitaciones">Habitaciones</span>
+          </label>
+          <label class="radio flex">
+            <input type="radio" name="radio" />
+            <span class="name" id="contacto">Contacto</span>
+          </label>
+          <div class="w-full text-right">
+            <h1 class="text-2xl font-bold mb-4">Suite Sanchez</h1>
+          </div>
+        </div>
+      </header>
+      <div class="container mx-auto p-4 Fondo" id="inicio-contenido">
+        <h1 class="text-2xl font-bold mb-4">Bienvenido a Suites Sanchez</h1>
+        <p class="mb-4">Disfruta de una estancia única en nuestras cómodas habitaciones y aprovecha nuestros servicios de primera clase.</p>
+        <p>¡Contáctanos hoy para reservar tu próxima escapada!</p> <br>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-zinc-800 dark:bg-zinc-800 p-4 rounded-lg">
+                <h2 class="text-lg font-semibold mb-2">Suite Presidencial</h2>
+                <img src="https://es.book.ennismore.com/sites/default/files/styles/hero_short_xl/public/2022-05/presidential_suite_01_hero.jpg?itok=73PBsKCW" alt="Suite Presidencial Image" class="mb-2">
+                <p>Disfruta de amplios espacios y comodidades de lujo en nuestra Suite Presidencial. Perfecta para una escapada romántica o una estancia de lujo.</p>
+              </div>
+              <div class="bg-zinc-800 dark:bg-zinc-800 p-4 rounded-lg">
+                <h2 class="text-lg font-semibold mb-2">Suite Imperial</h2>
+                <img src="https://photos.mandarinoriental.com/is/image/MandarinOriental/dmo-The-worlds-most-romantic-hotel-suites-dubai-royal-penthouse-bedroom" alt="Suite Imperial Image" class="mb-2">
+                <p>La Suite Imperial es ideal para familias que desean disfrutar juntas de unas vacaciones inolvidables. Espaciosa y acogedora.</p>
+              </div>
+              <div class="bg-zinc-800 dark:bg-zinc-800 p-4 rounded-lg">
+                <h2 class="text-lg font-semibold mb-2">Suite Real</h2>
+                <img src="https://www.gentleman.excelsior.com.mx/wp-content/uploads/2019/06/ok.TW-Palace-feb-19-02.jpg" alt="Suite Real Image" class="mb-2">
+                <p>Nuestra Suite Real ofrece un ambiente elegante y servicios exclusivos para viajeros de negocios que buscan comodidad y eficiencia.</p>
+              </div>
+            </div>
+          </div>
+          <div class="container mx-auto p-4 Fondo" id="habitaciones-contenido" style="display: none;">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              
+              <div class="bg-zinc-800 dark:bg-zinc-800 p-4 rounded-lg">
+                
+                <h2 class="text-lg font-semibold mb-2">Habitación individual estándar</h2>
+                <img src="https://mariel-hotel.com/wp-content/uploads/2022/05/Habitacion-Individual-Estandar-1180x710.jpg" class="mb-2">
+                <p>Ideal para viajeros solitarios, cama individual, baño privado, vistas panorámicas.</p>
+              </div>
+              <div class="bg-zinc-800 dark:bg-zinc-800 p-4 rounded-lg">
+                <h2 class="text-lg font-semibold mb-2">Habitación doble clásica </h2>
+                <img src="https://aquamarinamanta.com/wp-content/uploads/2019/06/doble-2048x1366.jpg" class="mb-2">
+                <p> Espaciosa y cómoda, cama matrimonial, decoración elegante, minibar.</p>
+              </div>
+              <div class="bg-zinc-800 dark:bg-zinc-800 p-4 rounded-lg">
+                <h2 class="text-lg font-semibold mb-2">Habitación familiar</h2>
+                <img src="https://www.swanscayhotel.com/wp-content/uploads/2022/05/hotel-en-bocas-del-toro-habitaciones-familiares-6.jpg" alt="Suite Ejecutiva Image" class="mb-2">
+                <p> Espacio para toda la familia, dos camas matrimoniales, área de juegos para niños, desayuno incluido.</p>
+              </div>
+              <div class="bg-zinc-800 dark:bg-zinc-800 p-4 rounded-lg">
+                <h2 class="text-lg font-semibold mb-2">Habitación Superior con Vistas al Mar</h2>
+                <img src="https://www.hotelcasablancasanandres.com/assets/cache/uploads/habitacion-doble-superior/1145x535/cama-matrimonio-habitacion-superior-vistas-mar-hotel-casablanca-san-andres.jpg" class="mb-2">
+                <p>Relájese con vistas al océano, cama king size, terraza privada, televisión de pantalla plana.</p>
+              </div>
+              <div class="bg-zinc-800 dark:bg-zinc-800 p-4 rounded-lg">
+                <h2 class="text-lg font-semibold mb-2">Habitación Deluxe con Jacuzzi</h2>
+                <img src="https://www.hotelesconencanto.club/wp-content/uploads/2021/04/jacuzzisbeuropa1-1024x768.jpg" class="mb-2">
+                <p> Lujo y confort combinados, jacuzzi privado, servicio de habitaciones las 24 horas, albornoces y zapatillas.</p>
+              </div>
+              <div class="bg-zinc-800 dark:bg-zinc-800 p-4 rounded-lg">
+                <h2 class="text-lg font-semibold mb-2">Habitación Premium con Terraza</h2>
+                <img src="https://www.elmueble.com/medio/2019/03/19/00343855b_3b174219_2000x1500.jpg" alt="Suite Ejecutiva Image" class="mb-2">
+                <p>Experiencia exclusiva, terraza privada, bar privado, amenities de lujo.</p>
+              </div>
+              <div class="bg-zinc-800 dark:bg-zinc-800 p-4 rounded-lg">
+                <h2 class="text-lg font-semibold mb-2">Habitación Temática para Niños</h2>
+                <img src="http://1.bp.blogspot.com/-baBIAql9gag/UOyVB94gujI/AAAAAAAAe4Q/PjDwIbcveeY/s1600/dormitorio-tematico-nino2.jpg" class="mb-2">
+                <p>Diversión para los más pequeños, decoración temática, juguetes y juegos, menú infantil.</p>
+              </div>
+              <div class="bg-zinc-800 dark:bg-zinc-800 p-4 rounded-lg">
+                <h2 class="text-lg font-semibold mb-2">Habitación Adaptada para Personas con Movilidad Reducida </h2>
+                <img src="https://microtelculiacan.com.mx/wp-content/uploads/2021/05/3.jpg" class="mb-2">
+                <p>Accesibilidad garantizada, baño adaptado, espacio amplio, asistencia disponible las 24 horas.</p>
+              </div>
+              <div class="bg-zinc-800 dark:bg-zinc-800 p-4 rounded-lg">
+                <h2 class="text-lg font-semibold mb-2">Suite Junior</h2>
+                <img src="https://grandpalaceriga.com/wp-content/uploads/2019/10/Junior-Suite_1.jpg" alt="Suite Ejecutiva Image" class="mb-2">
+                <p> Perfecta para escapadas románticas, sala de estar independiente, bañera de hidromasaje, balcón privado.</p>
+              </div>
+              <div class="bg-zinc-800 dark:bg-zinc-800 p-4 rounded-lg">
+                <h2 class="text-lg font-semibold mb-2">Suite Ejecutiva</h2>
+                <img src="https://www.fourseasons.com/alt/img-opt/~70.1530/publish/content/dam/fourseasons/images/web/BIH/BIH_100_aspect16x9.jpg" class="mb-2">
+                <p>Diseñada para viajeros de negocios, escritorio de trabajo, acceso a sala de reuniones, servicio de conserjería.</p>
+              </div>
+              <div class="bg-zinc-800 dark:bg-zinc-800 p-4 rounded-lg">
+                <h2 class="text-lg font-semibold mb-2">Suite Presidencial </h2>
+                <img src="https://www.thejosephnashville.com/resourcefiles/mainimages/tjn-pressuitehero.jpg?version=1162021152708" class="mb-2">
+                <p>La máxima elegancia, sala de estar independiente, comedor privado, servicio de mayordomo.</p>
+              </div>
+              <div class="bg-zinc-800 dark:bg-zinc-800 p-4 rounded-lg">
+                <h2 class="text-lg font-semibold mb-2">Suite Nupcial </h2>
+                <img src="https://i.pinimg.com/originals/7d/89/0a/7d890aeee755db83731d04ef89b55165.jpg" alt="Suite Ejecutiva Image" class="mb-2">
+                <p>Para ocasiones especiales, decoración romántica, servicio de champagne, desayuno en la cama.</p>
+              </div>
+              <div class="bg-zinc-800 dark:bg-zinc-800 p-4 rounded-lg">
+                <div id="video-container">
+                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/2ZDlq3LDPqM?si=DA0U13EGSZI09Op9" frameborder="0" allowfullscreen></iframe>
+                </div>
+                </div>
+            </div>
+          </div>
+          <div class="container mx-auto p-4 Fondo" id="contacto-contenido" style="display: none;">
+            <!-- Add your contact content here -->
+            <h1> Comunicarse al: 55 7893 5987 <BR>
+                Whatsapp: 55 78 09 89 80 89<br>
+                Facebook: https://es-la.facebook.com/  <br>
+                Instagram:  https://www.instagram.com/<br>
+            </h1>
+          </div>
+        </div>
+        <script>
+          const inicioElement = document.getElementById('inicio');
+          const habitacionesElement = document.getElementById('habitaciones');
+          const contactoElement = document.getElementById('contacto');
+    
+          inicioElement.addEventListener('click', () => {
+            document.getElementById('habitaciones-contenido').style.display = 'none';
+        document.getElementById('contacto-contenido').style.display = 'none';
+        document.getElementById('inicio-contenido').style.display = 'block';
+      });
+      
+      habitacionesElement.addEventListener('click', () => {
+        document.getElementById('inicio-contenido').style.display = 'none';
+        document.getElementById('contacto-contenido').style.display = 'none';
+        document.getElementById('habitaciones-contenido').style.display = 'block';
+      });
+      
+      contactoElement.addEventListener('click', () => {
+        document.getElementById('inicio-contenido').style.display = 'none';
+        document.getElementById('habitaciones-contenido').style.display = 'none';
+        document.getElementById('contacto-contenido').style.display = 'block';
+      });
+    </script>
+<div id="player"></div>
+
+<script>
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  var player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '0',
+      width: '0',
+      videoId: '263Vb6xiifo',
+      playerVars: {
+        'autoplay': 1,
+        'controls': 0,
+        'showinfo': 0,
+        'modestbranding': 1
+      },
+      events: {
+        'onReady': onPlayerReady
+      }
+    });
+  }
+
+  function onPlayerReady(event) {
+    event.target.playVideo();
+  }
+</script>
+  </body>
+</html>
